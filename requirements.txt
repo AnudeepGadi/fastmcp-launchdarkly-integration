@@ -1,0 +1,5 @@
+fastmcp>=3.0.0b2
+uvicorn==0.40.0
+launchdarkly-server-sdk==9.14.1
+python-dotenv==1.2.1
+fastapi

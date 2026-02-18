@@ -1,0 +1,29 @@
+repos:
+  # 1. Ruff: formatting, linting, import sorting
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.14.6  # latest version
+    hooks:
+      - id: ruff
+        args: [--fix]
+
+  # 2. Mypy: static type checking
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.4.1  # latest version
+    hooks:
+      - id: mypy
+        args: ["--ignore-missing-imports"]  # optional, avoids errors for untyped dependencies
+
+  # 3. Remove trailing whitespace, fix EOF, check YAML, prevent large files
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # 4. Black: Python code beautifier/formatter
+  - repo: https://github.com/psf/black
+    rev: 24.4.2   # use the latest stable version
+    hooks:
+      - id: black

@@ -53,7 +53,7 @@ LD_FF_KEY=mcp-tool-visibility
 
 ### 3. Installation
 ```bash
-pip install fastmcp ldclient-py python-dotenv
+pip install -r requirements.txt
 ```
 
 ---
@@ -75,7 +75,7 @@ Create a **JSON Variation** flag in LaunchDarkly named `mcp-tool-visibility`.
 
 ### Running the Server
 ```bash
-python server.py
+python main.py
 ```
 
 ### Testing with MCP Inspector
